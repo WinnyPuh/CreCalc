@@ -1,11 +1,17 @@
 public class Calc{
-  public static void main(String[] arg){
-    System.out.println("Calculate....");
-    int first = Integer.valueOf(arg[0]);
-    int second = Integer.valueOf(arg[1]);
-    int sum = first + second;
-    int ded = first - second;
-    System.out.println("Sum = " + sum);
-    System.out.println("Deduct = " + ded);
+  private int result;
+
+  public void cleanResult(){
+    this.result = 0;
+  }
+
+  public int getResult(){
+    return this.result;
+  }
+
+  public void add(int ... params){
+    for(int param : params){
+      this.result += param;
+    }
   }
 }
